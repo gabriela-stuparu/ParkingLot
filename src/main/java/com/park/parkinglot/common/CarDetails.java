@@ -8,11 +8,20 @@ package com.park.parkinglot.common;
  *
  * @author stupa
  */
+
 public class CarDetails implements java.io.Serializable {
 private Integer id;
 private String licensePlate;
 private String parkingSpot;
 private String username;
+
+    public String getParkingSpot() {
+        return parkingSpot;
+    }
+
+    public String getUsername() {
+        return username;
+    }
 
 public CarDetails(Integer id,String licensePlate, String parkingSpot, String username){
     this.id=id;

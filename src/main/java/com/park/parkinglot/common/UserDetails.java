@@ -23,5 +23,18 @@ public class UserDetails implements java.io.Serializable{
     public Integer getId(){
         return id;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+    
     
 }
