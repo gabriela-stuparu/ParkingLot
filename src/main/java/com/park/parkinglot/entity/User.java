@@ -6,19 +6,23 @@ package com.park.parkinglot.entity;
 
 import java.io.Serializable;
 import java.util.Collection;
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author stupa
  */
 @Entity
-@Table(name="USERS")
+@Table(name = "USERS")
+@XmlRootElement
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -29,8 +33,9 @@ public class User implements Serializable {
     private String email;
     private String password;
     private String position;
-    @OneToMany(mappedBy="user")
-    private Collection<Car>cars;
+    @JsonbTransient
+    @OneToMany(mappedBy = "user")
+    private Collection<Car> cars;
 
     public String getUsername() {
         return username;
@@ -64,6 +69,7 @@ public class User implements Serializable {
         this.position = position;
     }
 
+    @XmlTransient
     public Collection<Car> getCars() {
         return cars;
     }
@@ -71,9 +77,6 @@ public class User implements Serializable {
     public void setCars(Collection<Car> cars) {
         this.cars = cars;
     }
-    
-    
-     
 
     public Integer getId() {
         return id;
@@ -107,5 +110,5 @@ public class User implements Serializable {
     public String toString() {
         return "com.park.parkinglot.entity.User[ id=" + id + " ]";
     }
-    
+
 }

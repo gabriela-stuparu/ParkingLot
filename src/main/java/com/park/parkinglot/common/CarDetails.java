@@ -8,12 +8,12 @@ package com.park.parkinglot.common;
  *
  * @author stupa
  */
-
 public class CarDetails implements java.io.Serializable {
-private Integer id;
-private String licensePlate;
-private String parkingSpot;
-private String username;
+
+    private Integer id;
+    private String licensePlate;
+    private String parkingSpot;
+    private String username;
 
     public String getParkingSpot() {
         return parkingSpot;
@@ -23,20 +23,22 @@ private String username;
         return username;
     }
 
-public CarDetails(Integer id,String licensePlate, String parkingSpot, String username){
-    this.id=id;
-    this.licensePlate=licensePlate;
-    this.parkingSpot=parkingSpot;
-    this.username=username;
-    
-}
-public Integer getId(){
-    return id;
-    
-}
-public String getLicensePlate(){
-    return licensePlate;
-    
-}
-    
+    public CarDetails(Integer id, String licensePlate, String parkingSpot, String username) {
+        this.id = id;
+        this.licensePlate = licensePlate;
+        this.parkingSpot = parkingSpot;
+        this.username = username;
+
+    }
+
+    public Integer getId() {
+        return id;
+
+    }
+
+    public String getLicensePlate() {
+        return licensePlate;
+
+    }
+
 }

@@ -40,18 +40,18 @@
                         <option value="${user.id}" ${car.username eq user.username  ? 'selected':' '}>${user.username} </option>
                     </c:forEach>
                 </select>
-                    <div class="invalid-feedback">
-                        Please select an owner..
-                    </div>
+                <div class="invalid-feedback">
+                    Please select an owner..
+                </div>
             </div>
         </div>
-         <hr class="my-4">
-         <input type="hidden" name="car_id" value="${car.id}" />
+        <hr class="my-4">
+        <input type="hidden" name="car_id" value="${car.id}" />
         <button class="w-100 btn btn-primary btn-lg" type="submit">Save</button>
     </form>
-        
-   
+
+
     <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-     <script src="form-validation.js"></script>
+    <script src="form-validation.js"></script>
 
 </t:pageTemplate>

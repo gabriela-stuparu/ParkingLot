@@ -14,7 +14,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              
+
                 <c:if test="${pageContext.request.isUserInRole('AdminRole')}">
                     <li class="nav-item ${activePage eq 'Cars' ? 'active' : ''}">
                         <a class="nav-link" href="${pageContext.request.contextPath}/Cars"> Cars </a>
@@ -37,7 +37,7 @@
                     <a class="nav-link disabled">Disabled</a>
                 </li>
             </ul>
-         
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <c:choose>
