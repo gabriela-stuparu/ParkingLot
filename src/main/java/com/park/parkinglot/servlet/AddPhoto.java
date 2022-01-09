@@ -70,7 +70,7 @@ public class AddPhoto extends HttpServlet {
         CarDetails car=carBean.findById(carId);
         request.setAttribute("car", car);
         
-        request.getRequestDispatcher("/WEB-INF/pages/car/addPhoto.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/addPhoto.jsp").forward(request, response);
     }
 
     /**

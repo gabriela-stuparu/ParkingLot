@@ -38,7 +38,7 @@ public class PhotoDetails implements Serializable {
         return fileContent;
     }
     
-    public PhotoDetails(Integer id, String filename, String fileType, byte[] fielContent){
+    public PhotoDetails(Integer id, String filename, String fileType, byte[] fileContent){
         this.id=id;
         this.filename=filename;
         this.fileType=fileType;
